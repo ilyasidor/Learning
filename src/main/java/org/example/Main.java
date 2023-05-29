@@ -12,7 +12,6 @@ class Main {
     public static void main(String[] args) throws IOException {
         storage = new Storage("data.txt");
         StorageController controller = new StorageController(storage);
-
         Scanner in = new Scanner(System.in);
         while (true){
             String str = in.nextLine();

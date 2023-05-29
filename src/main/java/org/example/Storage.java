@@ -4,12 +4,16 @@ import java.io.*;
 import java.util.HashMap;
 
 public class Storage {
-    public HashMap<Integer,String > data = new HashMap<>();
+    private HashMap<Integer,String > data = new HashMap<>();
 
     public Storage(String pathToUpload) throws IOException {
 
         String uploadData = uploadDataOutFile(pathToUpload);
         loadDataToHashMap(uploadData);
+    }
+
+    public HashMap<Integer, String> getData(){
+        return data;
     }
     private void loadDataToHashMap(String uploadData){
         String[] lines = uploadData.split("\n");

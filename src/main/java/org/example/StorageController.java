@@ -92,7 +92,7 @@ public class StorageController {
         storage.addValue(count++,value);
     }
     private void updateLastCount(){
-        storage.data.forEach((key, value1) ->{
+        storage.getData().forEach((key, value1) ->{
             //+System.out.println(key+"|"+value);
             count=key+1;
         });
